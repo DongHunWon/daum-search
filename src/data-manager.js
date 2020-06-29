@@ -1,4 +1,4 @@
-function trendingList(path, page) {
+function lodingList(path, page) {
   return fetch(
     `http://1boon.kakao.com/ch/${path}.json?pagesize=10&page=${page}`,
     {
@@ -7,4 +7,4 @@ function trendingList(path, page) {
   ).then((res) => res.json());
 }
 
-export { trendingList };
+export { lodingList };
