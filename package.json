@@ -5,7 +5,7 @@
   "main": ".eslintrc.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack && cp dist/* ../docs"
+    "build": "webpack && cp dist/* ./docs"
   },
   "repository": {
     "type": "git",
