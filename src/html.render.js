@@ -1,4 +1,5 @@
 const $list = document.querySelector('.list');
+const $view = document.querySelector('.loding');
 let text = [];
 let id = 'trending';
 
@@ -22,6 +23,7 @@ function render(list, name) {
     </li>`,
   );
   text.push(...li);
+  $view.style.display = 'none';
   $list.innerHTML = text.join('');
 }
 

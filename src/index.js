@@ -4,10 +4,12 @@ import { render } from './html.render';
 
 const $btn = document.querySelector('.btn');
 const $ul = document.querySelector('.nav');
+const $view = document.querySelector('.loding');
 
 let page = 1;
 let id = 'trending';
 
+$view.style.display = 'none';
 lodingList(id, 1).then((resData) => render(resData.data, id));
 
 $ul.addEventListener('click', (event) => {
@@ -29,5 +31,6 @@ $ul.addEventListener('click', (event) => {
 
 $btn.addEventListener('click', () => {
   page += 1;
+  $view.style.display = 'block';
   lodingList(id, page).then((resData) => render(resData.data, id));
 });
